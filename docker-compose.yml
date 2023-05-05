@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  kerberos:
+    image: gcavalcante8808/krb5-server
+    environment:
+      - KRB5_REALM  = KRB.PROJECT.COM
+      - KRB5_KDC    = localhost
+      - KRB5_PASS   = mypass
+    ports:
+      - "88:88"
+      - "464:464"
+      - "749:749"
